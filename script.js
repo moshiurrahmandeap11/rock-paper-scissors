@@ -7,6 +7,24 @@ const winMsg = document.getElementById("msg");
 const userScorePara = document.getElementById("user-score");
 const computerScorePara = document.getElementById("comp-score")
 const drawScorePara = document.getElementById("draw-score")
+const resetBtn = document.getElementById("reset-btn")
+
+resetBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    
+      userScore = 0;
+      computerScore = 0;
+      drawScore = 0;
+
+      userScorePara.innerText = userScore;
+      computerScorePara.innerText = computerScore;
+      drawScorePara.innerText = drawScore;
+
+      winMsg.innerText = "Play your move!";
+    //   winMsg.style.backgroundColor = "transparent";
+    
+
+})
 
 const generateComputerChoice = () => {
     const options = ["rock", "paper", "scissors"]
